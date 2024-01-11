@@ -11,5 +11,7 @@ const tr = {
   profile:"Profil",
   logout:"Çıkış Yap",
   detailSee:"Detay gör",
+  moreSee:"Devamını gör",
+  notMore:"Daha az gör",
 };
 export default tr;

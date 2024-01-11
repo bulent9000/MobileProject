@@ -17,10 +17,11 @@ fontSize:16,
 fontWeight:"600",
     },
     timer:{
-        
+        color:colors.grey,
+        fontSize:12
     },
     desc:{
-
+fontSize:12
     },
     textContainer:{
         padding:"5%",

@@ -102,3 +102,13 @@ export type EmptyProps={
 
   text:string;
 }
+export type EducationDetailProps={
+  isVisibleDesc:boolean,
+  setIsVisibleDesc:(params:boolean)=>void;
+
+  
+}
+export type DetilSeeButtonProps={
+label:string;
+onPress:()=>void;
+}

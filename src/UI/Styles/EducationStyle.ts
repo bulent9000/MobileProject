@@ -38,22 +38,7 @@ const educationStyles = StyleSheet.create({
     color: colors.grey,
   },
 
-  button: {
-    width: width * 0.18,
-    justifyContent: "center",
-
-    alignItems: "center",
-    borderBottomWidth: 1,
-    paddingBottom:2,
-  },
-  buttonContainer: {
-    width:"100%",
-    alignItems:"flex-end",
-  },
-
-  textLine: {
-   
-  },
+ 
 });
 
 export default educationStyles;

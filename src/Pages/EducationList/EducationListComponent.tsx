@@ -6,6 +6,7 @@ import Search from "../../Component/Search";
 import { EducationListProps } from "../../Type";
 import EmptyComponent from "../../Component/EmptyComponent";
 import { descMax, threeDot, titleMax } from "../../Constant/FormatString";
+import DetailSeeButton from "../../Component/DetailSeeButton";
 export default function EducationListComponent({
   searchText,
   onSearch,
@@ -14,18 +15,22 @@ export default function EducationListComponent({
 }: EducationListProps) {
   const listCard = ({ item }) => (
     <View style={educationStyles.cardContainer}>
-      <Text style={educationStyles.title}>{item.title.substring(0,titleMax).concat(item.title.length>titleMax ? threeDot: "")}</Text>
+      <Text style={educationStyles.title}>
+        {item.title
+          .substring(0, titleMax)
+          .concat(item.title.length > titleMax ? threeDot : "")}
+      </Text>
 
       <Text style={educationStyles.timer}>
         Eğitimin süresi: {item.timer} saat
       </Text>
 
-      <Text style={educationStyles.desc}>{item.desc.substring(0,descMax).concat(item.desc.length>descMax? threeDot:"")}</Text>
-      <View style={educationStyles.buttonContainer}>
-        <TouchableOpacity style={educationStyles.button} onPress={onDetail}>
-          <CustomText tx="detailSee" style={educationStyles.textLine} />
-        </TouchableOpacity>
-      </View>
+      <Text style={educationStyles.desc}>
+        {item.desc
+          .substring(0, descMax)
+          .concat(item.desc.length > descMax ? threeDot : "")}
+      </Text>
+      <DetailSeeButton label="detailSee" onPress={onDetail} />
     </View>
   );
 
@@ -40,7 +45,7 @@ export default function EducationListComponent({
         data={data}
         showsVerticalScrollIndicator={false}
         renderItem={listCard}
-        ListEmptyComponent={()=><EmptyComponent text={searchText}/>}
+        ListEmptyComponent={() => <EmptyComponent text={searchText} />}
       />
     </View>
   );
